@@ -36,6 +36,7 @@ body {
   /* margin-left: 20rem;
   margin-right: 20rem; */
   margin: 1rem;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.06), 0px 7px 9px rgba(0, 0, 0, 0.12), 0px 20px 25px -8px rgba(0, 0, 0, 0.18);
   
 }
 .card-title {

@@ -38,8 +38,8 @@ function App() {
   }, []);
 
   return (
-    <div className="Title">
-      <h1>Alexandr Petrov</h1>
+    <div class="fadeindown animation-duration-1000">
+      <h1 className="Title">Alexandr Petrov</h1>
       <div className="App">
         <div className="card">
           <h1 className="card-title">Education</h1>
