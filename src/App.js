@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState, useEffect} from 'react';
 
 function App() {
+
+  const [educationData, setEducationData] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/getEducation")
+      .then((response) => response.text())
+      .then((data) => setEducationData(data))
+      .catch((error) => console.error("there was an error fetching the education data"))
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>{educationData}</p>
     </div>
   );
 }
