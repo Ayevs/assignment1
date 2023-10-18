@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
+import { Card } from "primereact/card";
 
 function App() {
   const [educationData, setEducationData] = useState([]);
@@ -37,37 +38,48 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <h1>Education</h1>
-      <p>
-        {educationData.map((edu) => (
-          <li>{edu.school}</li>
-        ))}
-      </p>
+    <div className="Title">
+      <h1>Alexandr Petrov</h1>
+      <div className="App">
+        <div className="card">
+          <h1 className="card-title">Education</h1>
+          <p>
+            {educationData.map((edu) => (
+              <li>{edu.school}</li>
+            ))}
+          </p>
+        </div>
 
-      <h1>Experiance</h1>
-      <p>
-        {experianceData.map((exp) => (
-          <li>
-            {exp.lab}
-            {exp.atHome}
-          </li>
-        ))}
-      </p>
+        <div className="card">
+          <h1 className="card-title">Experiance</h1>
+          <p>
+            {experianceData.map((exp) => (
+              <li>
+                {exp.lab}
+                {exp.atHome}
+              </li>
+            ))}
+          </p>
+        </div>
 
-      <h1>Overview</h1>
-      <p>
-        {overViewData.map((ovr) => (
-          <p>{ovr.desc}</p>
-        ))}
-      </p>
+        <div className="card">
+          <h1 className="card-title">Overview</h1>
+          <p>
+            {overViewData.map((ovr) => (
+              <p>{ovr.desc}</p>
+            ))}
+          </p>
+        </div>
 
-      <h1>Skills</h1>
-      <p>
-        {skillsData.map((skills) => (
-          <li>{skills.skill}</li>
-        ))}
-      </p>
+        <div className="card">
+          <h1 className="card-title">Skills</h1>
+          <p>
+            {skillsData.map((skills) => (
+              <li>{skills.skill}</li>
+            ))}
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
